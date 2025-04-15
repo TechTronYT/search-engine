@@ -15,9 +15,9 @@ jobs:
 
       - name: Inject secrets into HTML
         run: |
-          sed -i "s|__API_KEY__|${{ secrets.API_KEY }}|g" SearchEngineSheetsAPI.html
-          sed -i "s|__SHEET_ID__|${{ secrets.SHEET_ID }}|g" SearchEngineSheetsAPI.html
-          sed -i "s|__SHEET_NAME__|${{ secrets.SHEET_NAME }}|g" SearchEngineSheetsAPI.html
+          sed -i "s|__API_KEY__|${{ secrets.API_KEY }}|g" Index.html
+          sed -i "s|__SHEET_ID__|${{ secrets.SHEET_ID }}|g" Index.html
+          sed -i "s|__SHEET_NAME__|${{ secrets.SHEET_NAME }}|g" Index.html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
